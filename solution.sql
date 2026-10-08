@@ -1,16 +1,21 @@
--- ============================================
--- SOLUTION - INSERT STUDENT RECORDS
--- ============================================
+CREATE DATABASE GUGAN;
+USE GUGAN;
+Create Course table
+CREATE TABLE Course (
+    CourseID INT PRIMARY KEY,
+    CourseName VARCHAR(100),
+    Credits INT,
+    DepartmentID INT
+);
 
-USE CollegeDB;
-
--- Insert student records
-INSERT INTO Student
-    (StudentID, StudentName, Gender, DepartmentID)
+-- Insert records
+INSERT INTO Course (CourseID, CourseName, Credits, DepartmentID)
 VALUES
-    (1001, 'Arun', 'Male', 101),
-    (1002, 'Divya', 'Female', 102),
-    (1003, 'Karthik', 'Male', 101);
+(101, 'Database Management Systems', 4, 1),
+(102, 'Computer Networks', 3, 2),
+(103, 'Operating Systems', 4, 1);
 
--- Display all student records
-SELECT * FROM Student;
+-- Display table structure
+DESCRIBE Course;
+
+
